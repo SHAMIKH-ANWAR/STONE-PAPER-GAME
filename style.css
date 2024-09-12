@@ -1,0 +1,101 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(32, 139, 58);
+}
+
+.main-content {
+    background-color: hsl(342, 100%, 52%);
+    height: 78vh;
+    width: 80vw;
+    max-width: 50rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-color: aqua;
+    flex-direction: column; /* Added to center the buttons and scoreboard */
+}
+
+.game {
+    display: grid;
+    justify-content: center;
+    height: auto;
+    width: 48vw;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    align-items: center;
+}
+
+#buttons {
+    height: 20vh;
+    width: 13vw;
+    margin: auto;
+    margin-top: 2rem;
+    object-fit: contain;
+}
+
+.stone, .paper, .scissors {
+    width: 100%; /* Make the image take the full width of the button */
+    height: 100%; /* Make the image take the full height of the button */
+    object-fit: contain; 
+    mix-blend-mode: color-burn;
+}
+
+#reset {
+    grid-column: span 3;
+    width: 20vw;
+    margin-left: 9rem;
+    text-align: center;
+    background-color: #f0ad4e; /* Styled the reset button */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+}
+
+#reset:hover {
+    background-color: #ec971f;
+}
+
+#you {
+    margin-top: 20px;
+    font-size: 28px;
+}
+
+#computer {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+/* Scoreboard styles */
+.scoreboard {
+    grid-column: span 3;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+#playerScore, #computerScore {
+    font-weight: bold;
+    color: hsl(342, 100%, 52%); /* Use the same color theme */
+}
